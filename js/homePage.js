@@ -4,7 +4,10 @@ import './components/ui-testimonials'
 const heroNavBtn1 = new UiButton({
   text: 'Learn more',
   styles: { backgroundColor: '#FFFFFF', width: '200px' },
-  func: () => { console.log('click') }
+  func: () => {
+    const pos = document.querySelector('.learn-more').getBoundingClientRect().top
+    window.scrollTo( { top: pos, behavior: 'smooth' })
+  }
 })
 
 const heroNavBtn2 = new UiButton({

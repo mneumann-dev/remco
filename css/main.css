@@ -177,15 +177,15 @@ textarea {
 
 /* LEARN MORE SECTION
 =====================================================================================================================*/
-.section-2 {
+.learn-more {
   background-color: #000000;
   background-image: url("/img/section-2-bg.png");
   background-position: top;
   background-size: contain;
 }
 @media only screen and (min-width: 48rem) {
-  .section-2 { background-position: left }
-  .section-2 img { margin-left: 20%; }
+  .learn-more { background-position: left }
+  .learn-more img { margin-left: 20%; }
 }
 
 /* FEATURES SECTION
