@@ -9,6 +9,7 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
+  transition: box-shadow 0.25s ease-in-out;
   width: 100%;
   z-index: 99;
 }
@@ -31,6 +32,7 @@ div {
 div a { color: #FFFFFF; padding: 0.5rem 0; text-decoration: none; }
 div a:hover, .active { text-decoration: underline; text-underline-position: under; }
 .show-menu { transform: translateY(0); }
+.is-scrolling { box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5); }
 @media only screen and (min-width: 36rem) {
   .brand, button svg, div { padding: 0 1rem; }
   button { display: none; }
@@ -75,6 +77,7 @@ class UiNavbar extends HTMLElement {
   }
 
   connectedCallback () {
+    window.addEventListener('scroll', this._isScrolling.bind(this))
     this.button.addEventListener('click', this._showMenu.bind(this))
     this._set()
 
@@ -93,6 +96,10 @@ class UiNavbar extends HTMLElement {
 
   _showMenu () {
     this.menu.classList.toggle('show-menu')
+  }
+
+  _isScrolling () {
+    window.scrollY > 0 ? this.navbar.classList.add('is-scrolling') : this.navbar.classList.remove('is-scrolling')
   }
 
   /* TODO: Demonstration purposes */
