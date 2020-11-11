@@ -108,6 +108,7 @@ textarea {
 .m-1 { margin: 0.5rem; }
 .m-2 { margin: 1rem; }
 .p-0 { padding: 0; }
+.p-2 { padding: 1rem; }
 .p-4 { padding: 2rem; }
 .pt-1 { padding-top: 0.5rem; }
 .pt-5 { padding-top: 2.5rem; }
@@ -134,6 +135,7 @@ textarea {
   }
   .ml-md-2 { margin: 1rem; }
   .p-md-4 { padding: 2rem; }
+  .pr-md-4 { padding-right: 2rem; }
 }
 
 /* UTILITY
@@ -152,7 +154,7 @@ textarea {
 /* HERO SECTION
 =====================================================================================================================*/
 .hero { background-image: url("/img/hero-img.png"); }
-
+.hero > div { margin-bottom: 100px; }
 .hero h1 { font-weight: 800; margin-bottom: 0; }
 .hero__company span {
   bottom: -5px;
@@ -251,9 +253,11 @@ footer {
 .footer__content svg { fill: #FFFFFF; height: auto; width: 18pt; }
 .footer__copyright { padding: 0 0.5rem; }
 .footer__copyright a { text-decoration: none; }
+.footer__copyright span { font-size: 0.75em; width: 90%; }
 @media only screen and (min-width: 48rem) {
   footer { align-items:center; flex-direction: row }
   .footer__content { flex-direction: row; }
   .footer__content p { width: 30vw; }
   .footer__copyright { justify-content: space-between; padding: 0 1rem; }
+  .footer__copyright span { text-align: left; }
 }

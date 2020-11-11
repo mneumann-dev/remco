@@ -1,6 +1,7 @@
 import './components/ui-navbar'
 import UiButton from './components/ui-button'
 import './components/ui-testimonials'
+import './components/ui-callNow'
 
 const heroNavBtn1 = new UiButton({
   text: 'Learn more',

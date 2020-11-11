@@ -19,13 +19,14 @@ button { background-color: transparent; border: none; cursor: pointer; margin: 0
 button svg { fill: #FFFFFF; }
 div {
   background-color: #000000;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
   position: absolute;
   top: 56px;
   transition: transform 0.5s ease-in-out;
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% + -70px));
   width: 100%;
   z-index: -1;
 }
@@ -37,6 +38,7 @@ div a:hover, .active { text-decoration: underline; text-underline-position: unde
   .brand, button svg, div { padding: 0 1rem; }
   button { display: none; }
   div {
+    box-shadow: none;
     flex-direction: row;
     position: relative;
     transition: none;
