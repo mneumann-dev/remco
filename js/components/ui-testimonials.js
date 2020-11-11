@@ -17,28 +17,31 @@ template.innerHTML = `
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
 }
 .card {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0.3rem;
-  height: 285px;
-  margin: 0.5rem;
+  height: auto;
+  margin: 1rem;
   padding: 2rem;
-  width: 300px;
+  width: 320px;
 }
 .card header {
   align-items: center;
   display: flex;
+  padding-bottom: 0.5rem;
 }
 .card header div { padding-left: 1rem; }
 .card header img { border-radius: 50%; height: 60px; width: 60px; }
 .card header div h3 { margin: 0; }
 .card > div { align-items: center; display: flex; height: 75%; justify-content: center; }
 .card p { font-style: italic }
+@media only screen and (min-width: 36rem) {
+  .testimonials { width: 75%; }
+}
 </style>
-<div class="testimonials">
-
-</div>
+<div class="testimonials"></div>
 `
 
 class UiTestimonials extends HTMLElement {

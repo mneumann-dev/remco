@@ -70,6 +70,7 @@ textarea {
 .align-items-center { align-items: center; }
 .justify-content-between { justify-content: space-between; }
 .justify-content-center { justify-content: center; }
+.justify-content-evenly { justify-content: space-evenly; }
 
 .absolute { position: absolute; }
 .relative { position: relative; }
@@ -141,6 +142,7 @@ textarea {
 .img-fluid { height: auto; max-width: 100%; }
 .text-center { text-align: center; }
 .text-white-50 { color: rgba(255, 255, 255, 0.5); }
+.text-decor-none { text-decoration: none; }
 .bg-dark { background-color: var(--bg-color) !important; border-radius: 0.3rem; }
 .has-bg-img {
   background-position: center;
@@ -190,17 +192,18 @@ textarea {
 
 /* FEATURES SECTION
 =====================================================================================================================*/
-.section-3 { background-attachment: fixed; background-image: url("/img/section-3-bg.png"); }
+.features { background-attachment: fixed; background-image: url("/img/section-3-bg.png"); }
 
-.section-3__list {
+.features ul {
   background-color: transparent !important;
+  height: 396px;
   list-style-position: inside;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
-.section-3__list::-webkit-scrollbar { display: none; }
+.features ul::-webkit-scrollbar { display: none; }
 
-.section-3__list li {
+.features ul li {
   filter: blur(1px);
   list-style-position: inside;
   margin: 0.5rem 0;
@@ -210,20 +213,20 @@ textarea {
   width: 100%;
 }
 
-.section-3__list li:hover, .listy {
+.features ul li:hover, .active-list-item {
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5) !important;
   filter: blur(0) !important;
   padding: 1.5rem 1rem !important;
   opacity: 1 !important;
   z-index: 98 !important;
 }
-.section-3__list li:first-child:hover { margin: 2rem 0 0 0 !important; }
-.section-3__list li:last-child:hover  { margin: 0 0 2rem 0 !important; }
+.features ul li:first-child:hover { margin: 2rem 0 0 0 !important; }
+.features ul li:last-child:hover  { margin: 0 0 2rem 0 !important; }
 @media only screen and (min-width: 36rem) {
-  .section-3__list li {
+  .features ul li {
     max-width: 75%;
   }
-  .section-3__list li:hover, .listy {
+  .features ul li:hover, .active-list-item {
     transform: translateX(25px) !important;
   }
 }
@@ -242,8 +245,15 @@ textarea {
 footer {
   align-items: flex-start;
   flex-direction: column;
-  padding: 1rem;
+  padding-top: 1rem;
 }
+.footer__content a { color: #FFFFFF; padding: 0.25rem 0; text-decoration: none; }
+.footer__content a:hover { text-decoration: underline; }
+.footer__content svg { fill: #FFFFFF; height: auto; width: 18pt; }
+footer .brand { height: 56px; text-decoration: none; }
 @media only screen and (min-width: 48rem) {
   footer { align-items:center; flex-direction: row }
+  .footer__content { flex-direction: row; }
+  .footer__content p { width: 30vw; }
+  .footer__copyright { height: 56px; justify-content: space-between; }
 }
