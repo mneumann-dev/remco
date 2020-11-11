@@ -142,7 +142,6 @@ textarea {
 .img-fluid { height: auto; max-width: 100%; }
 .text-center { text-align: center; }
 .text-white-50 { color: rgba(255, 255, 255, 0.5); }
-.text-decor-none { text-decoration: none; }
 .bg-dark { background-color: var(--bg-color) !important; border-radius: 0.3rem; }
 .has-bg-img {
   background-position: center;
@@ -245,15 +244,16 @@ textarea {
 footer {
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 .footer__content a { color: #FFFFFF; padding: 0.25rem 0; text-decoration: none; }
 .footer__content a:hover { text-decoration: underline; }
 .footer__content svg { fill: #FFFFFF; height: auto; width: 18pt; }
-footer .brand { height: 56px; text-decoration: none; }
+.footer__copyright { padding: 0 0.5rem; }
+.footer__copyright a { text-decoration: none; }
 @media only screen and (min-width: 48rem) {
   footer { align-items:center; flex-direction: row }
   .footer__content { flex-direction: row; }
   .footer__content p { width: 30vw; }
-  .footer__copyright { height: 56px; justify-content: space-between; }
+  .footer__copyright { justify-content: space-between; padding: 0 1rem; }
 }
